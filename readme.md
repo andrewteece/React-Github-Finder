@@ -1,1 +1,0 @@
-### React App with Tailwind and DaisyUI

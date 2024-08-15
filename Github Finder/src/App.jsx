@@ -14,6 +14,7 @@ function App() {
         <main className='container mx-auto px-3'>
           <Routes>
             <Route path='/' element={<Home />} />
+
             <Route path='/About' element={<About />} />
             <Route path='/notfound' element={<NotFound />} />
             <Route path='*' element={<NotFound />} />

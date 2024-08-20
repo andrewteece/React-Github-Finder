@@ -4,7 +4,7 @@ import GithubContext from '../../context/github/GithubContext'
 function UserSearch() {
   const [text, setText] = useState('')
 
-  const { users, dispatch } = useContext(GithubContext)
+  const { users, searchUsers } = useContext(GithubContext)
   // const { setAlert } = useContext(AlertContext)
 
   const handleChange = (e) => setText(e.target.value)
@@ -13,11 +13,9 @@ function UserSearch() {
     e.preventDefault()
 
     if (text === '') {
-      setAlert('Please enter something', 'error')
+      alert('Please enter something', 'error')
     } else {
-      dispatch({ type: 'SET_LOADING' })
-      const users = await searchUsers(text)
-      dispatch({ type: 'GET_USERS', payload: users })
+      searchUsers(text)
 
       setText('')
     }

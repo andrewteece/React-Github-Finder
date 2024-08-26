@@ -2,6 +2,7 @@ import { FaCodepen, FaStore, FaUserFriends, FaUsers } from 'react-icons/fa'
 import { useContext, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import Spinner from '../components/layout/Spinner'
+import RepoList from '../components/repos/RepoList'
 import GithubContext from '../context/github/GithubContext'
 import { getUserAndRepos } from '../context/github/GithubActions'
 
